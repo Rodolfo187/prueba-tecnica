@@ -37,11 +37,6 @@ const resolvers = {
         episode: async(_,args) =>{
             const {id} = args
             let epi = await Episodes.findById(id)
-            console.log(epi);
-            console.log(epi.characters);
-            epi.characters.forEach(function(numero) {
-                console.log(numero.name);
-            });
             
             return epi;
         },

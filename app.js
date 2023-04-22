@@ -14,6 +14,10 @@ module.exports = app
  async function start() {
 
    const apolloServer = new ApolloServer({
+    cors: {
+        "origin": "https://studio.apollographql.com",
+        "credentials": true
+      }, 
         typeDefs,
         resolvers
     })
