@@ -14,10 +14,6 @@ module.exports = app
  async function start() {
 
    const apolloServer = new ApolloServer({
-    cors: {
-        origin: "https://studio.apollographql.com",
-        credentials: true
-      }, 
         typeDefs,
         resolvers
     })
@@ -27,7 +23,7 @@ module.exports = app
     apolloServer.applyMiddleware({app})
 
     app.listen(process.env.PORT, () =>{
-        console.log('Server on port', process.env.PORT)
+        console.log('El puerto del servidor es', process.env.PORT)
     })
 }
 

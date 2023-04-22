@@ -17,6 +17,7 @@ const typeDefs = gql`
         location:String
         image:String
         created:String
+        episodes:[Episodes]
     }
 
     type character{
@@ -27,6 +28,7 @@ const typeDefs = gql`
         location:Locations
         image:String
         created:String
+        episodes:[Episodes]
     }
 
     type Episodes{
@@ -43,7 +45,7 @@ const typeDefs = gql`
         name:String,
         type: String,
         dimension: String,
-        residents:[String],
+        residents:[characters],
         created:String,
     }
 

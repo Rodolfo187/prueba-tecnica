@@ -1,11 +1,16 @@
 const {Schema, model} = require('mongoose')
 
+const characters = require('./characters')
+
 const locationsSchema = new Schema({
     _id:String,
     name:String,
     type: String,
     dimension: String,
-    residents:[String],
+    residents:[{
+        type: Schema.Types.ObjectId,
+        ref: 'characters'
+    }],
     created:String,
 })
 
