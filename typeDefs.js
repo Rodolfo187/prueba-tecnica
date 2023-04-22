@@ -70,7 +70,7 @@ const typeDefs = gql`
 
     #Es para agregar y modificar
     type Mutation{
-        createTask(name:String, status:String):Datos,
+        createCharacter(name:String, status:String):characters,
         deleteCharacter(id:ID!):String
         updateCharacter(id:ID!, param: parametros):character
     }

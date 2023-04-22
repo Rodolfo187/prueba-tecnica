@@ -1,6 +1,5 @@
 const {Schema, model} = require('mongoose')
-const Locations = require('./Locations')
-const Episodes = require('./Episodes')
+
 
 const charactersSchema = new Schema({
     _id:String,

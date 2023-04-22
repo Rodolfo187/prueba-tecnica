@@ -63,12 +63,12 @@ const resolvers = {
 
     },
     Mutation: {
-        createTask: async (_,args) =>{
+        createCharacter: async (_,args) =>{
             const {name, status} = args
-            const newTask = new Tarea({name, status})//Creamos el objeto para guardarlo
-            await newTask.save()
-            console.log(newTask)
-            return newTask
+            const newCharacter = new characters({name, status})//Creamos el objeto para guardarlo
+            await newCharacter.save()
+            console.log(newCharacter)
+            return newCharacter
         },
 
         async deleteCharacter(_,args){
